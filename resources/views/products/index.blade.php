@@ -2,7 +2,12 @@
 /** @var \Illuminate\Pagination\LengthAwarePaginator|\App\Domain\Product\Product[] $products */
 @endphp
 
+
+
+
 <x-app-layout title="Products">
+
+sddssdf 
     <div class="grid grid-cols-3 gap-12">
         @foreach($products as $product)
             <x-product 
@@ -12,6 +17,9 @@
           />
         @endforeach
     </div>
+
+
+
 
     <div class="mx-auto mt-12">
         {{ $products->links() }}

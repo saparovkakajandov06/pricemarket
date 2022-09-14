@@ -7,6 +7,8 @@ use App\Domain\Cart\Actions\InitializeCart;
 use App\Domain\Coupon\Coupon;
 use App\Domain\Customer\Customer;
 use App\Domain\Product\Product;
+use App\Models\Category;
+use App\Models\City;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +16,11 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        $products = Product::factory(100)->create();
+        $products = Product::factory(50000)->create();
+
+        Category::factory(100)->create();
+
+        City::factory(30)->create();
 
         Coupon::factory()->create();
 

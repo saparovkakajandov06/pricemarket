@@ -23,6 +23,14 @@ class Product extends Model
         return new ProductFactory();
     }
 
+    public function category(){
+        return $this->belongsTo('App\Models\Category');
+    }
+
+    public function city(){
+        return $this->belongsTo('App\Models\City');
+    }
+
     public function getUuid(): string
     {
         return $this->uuid;

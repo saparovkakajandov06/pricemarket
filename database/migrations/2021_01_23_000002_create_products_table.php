@@ -15,6 +15,8 @@ class CreateProductsTable extends Migration
             $table->integer('item_price');
             $table->integer('vat_percentage');
             $table->boolean('manages_inventory')->default(0);
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
             $table->timestamps();
         });
     }
