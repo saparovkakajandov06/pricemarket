@@ -56,6 +56,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('getNewAjax','CategoryController@getNewAjax')->name('getNewAjax');
+Route::get('getCategoryAjax','CategoryController@getCategoryAjax')->name('getCategoryAjax');
+
+Route::get('getCityAjax','CategoryController@getCityAjax')->name('getCityAjax');
 
 require __DIR__ . '/auth.php';
